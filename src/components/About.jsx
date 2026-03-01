@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FiBook, FiCode, FiCpu, FiAward, FiCoffee, FiActivity } from 'react-icons/fi';
+import { FiBook, FiCode, FiActivity, FiZap, FiClock, FiTarget } from 'react-icons/fi';
 
 const About = () => {
   return (
@@ -24,18 +24,22 @@ const About = () => {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500 italic">Me_</span>
             </h2>
             <p className="text-zinc-400 text-lg leading-relaxed font-light mb-8">
-              I am a dedicated <span className="text-white font-medium">BSc in CSE Student</span> with a relentless drive for building efficient digital systems. My approach blends academic rigour with modern web technologies to create high-performance applications.
+              I’m a dedicated CSE student who loves building digital systems that actually work. I’m a hardworking developer who balances my university studies with a hands-on approach to modern web tech. My goal is to stay punctual with every deadline while building high-performance applications that solve real problems."
             </p>
             
             {/* Quick Stats/Personality Badges */}
-            <div className="grid grid-cols-2 gap-4">
-              <div className="p-4 rounded-2xl bg-white/5 border border-white/10">
-                <p className="text-purple-400 font-mono text-xs uppercase tracking-widest mb-1">Status</p>
-                <p className="text-white font-bold">Hardworking</p>
+            <div className="grid grid-cols-3 gap-3">
+              <div className="p-3 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors">
+                <p className="text-purple-400 font-mono text-[10px] uppercase tracking-widest mb-1 flex items-center gap-1">
+                  <FiZap size={12}/> Ethic
+                </p>
+                <p className="text-white text-sm font-bold">Hardworking</p>
               </div>
-              <div className="p-4 rounded-2xl bg-white/5 border border-white/10">
-                <p className="text-purple-400 font-mono text-xs uppercase tracking-widest mb-1">Mindset</p>
-                <p className="text-white font-bold">Punctual</p>
+              <div className="p-3 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors">
+                <p className="text-blue-400 font-mono text-[10px] uppercase tracking-widest mb-1 flex items-center gap-1">
+                  <FiClock size={12}/> Delivery
+                </p>
+                <p className="text-white text-sm font-bold">Punctual</p>
               </div>
             </div>
           </motion.div>
