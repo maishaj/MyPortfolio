@@ -110,7 +110,7 @@ const Contact = () => {
                 <div className="flex justify-start"> 
                <button 
                 type="submit"
-                className="group relative flex items-center justify-center gap-3 px-10 py-4 bg-white text-black font-black text-[10px] uppercase tracking-[0.2em] rounded-full transition-all duration-300 hover:shadow-[0_0_30px_rgba(59,130,246,0.4)] hover:-translate-y-1 active:scale-95"
+                className="mx-auto group relative flex items-center justify-center gap-3 px-10 py-4 bg-white text-black font-black text-[10px] uppercase tracking-[0.2em] rounded-full transition-all duration-300 hover:shadow-[0_0_30px_rgba(59,130,246,0.4)] hover:-translate-y-1 active:scale-95"
                 >
                 <span>Send Message</span>
                 <FiSend size={14} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300 text-blue-600" />

@@ -4,7 +4,7 @@ import { FiBook, FiCode, FiCpu, FiAward, FiCoffee, FiActivity } from 'react-icon
 
 const About = () => {
   return (
-    <section id="about" className=" w-10/12 mx-auto relative py-24 bg-[#030303] overflow-hidden">
+    <section id="about" className=" w-full mx-auto relative py-24 bg-[#030303] overflow-hidden">
       
       {/* Background Decorative Glow */}
       <div className="absolute top-[40%] left-[-10%] w-72 h-72 bg-purple-600/10 blur-[120px] rounded-full pointer-events-none" />

@@ -7,13 +7,13 @@ import { Link } from 'react-router';
 
 const Hero = () => {
   return (
-    <section id="home" className="relative min-h-screen w-full max-w-7xl mx-auto bg-[#030303] flex items-center overflow-hidden pt-20">
+    <section id="home" className="relative min-h-screen w-full mx-auto bg-[#030303] flex items-center overflow-hidden pt-20">
       
       {/* Background Glows */}
       <div className="absolute top-[-10%] right-[-5%] w-[40%] h-[50%] rounded-full bg-purple-600/10 blur-[120px]" />
       <div className="absolute bottom-[10%] left-[-5%] w-[30%] h-[40%] rounded-full bg-blue-600/10 blur-[120px]" />
 
-      <div className="container mx-auto px-6 lg:px-12 grid lg:grid-cols-2 gap-12 items-center relative z-10">
+      <div className="container mx-auto px-6 lg:px-12 grid lg:grid-cols-2 gap-5 items-center relative z-10">
         
         {/* Left Side: Information */}
         <motion.div 
@@ -77,10 +77,9 @@ const Hero = () => {
         transition={{ duration: 0.8 }}
         className="relative group justify-self-center lg:justify-self-end"
         >
-        {/* Glass Card Outer Frame - Now Circular */}
         <div className="relative z-10 p-2 rounded-full bg-gradient-to-br from-white/10 to-transparent border border-white/10 backdrop-blur-2xl shadow-2xl">
             
-            {/* Image Container - Aspect Square + Rounded Full */}
+            
             <div className="relative w-[280px] sm:w-[300px] md:w-[300px] mx-auto aspect-square overflow-hidden rounded-full border-4 border-[#030303]">
             <img 
                 src={profile}
@@ -88,7 +87,7 @@ const Hero = () => {
                 className="w-full h-full object-cover grayscale brightness-110 group-hover:grayscale-0 transition-all duration-700"
             />
             
-            {/* Subtle bottom shadow overlay inside the circle */}
+            
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
             
             {/* Floating Tech Stack inside Image - Repositioned for Circle */}
