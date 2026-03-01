@@ -90,8 +90,7 @@ const Navbar = () => {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: -10 }}
             transition={{ duration: 0.2, ease: "circOut" }}
-            /* width: w-48 makes it a small vertical strip, right-6 aligns it with the toggle */
-            className="absolute top-full right-6 mt-2 w-48 bg-black/90 backdrop-blur-2xl border border-white/10 rounded-2xl p-3 md:hidden pointer-events-auto shadow-2xl"
+            className="absolute top-15 right-13 mt-2 w-48 bg-black/90 backdrop-blur-2xl border border-white/10 rounded-2xl p-3 md:hidden pointer-events-auto shadow-2xl"
           >
             <div className="flex flex-col gap-1">
               {navLinks.map((link, i) => (

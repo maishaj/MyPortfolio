@@ -44,7 +44,7 @@ const Skills = () => {
             transition={{ duration: 0.6 }}
             className="text-4xl md:text-5xl font-black text-white tracking-tighter"
           >
-            TECH <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">STACK_</span>
+            TECH <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">SKILLS_</span>
           </motion.h2>
           <div className="h-1 w-20 bg-blue-500 mt-4 rounded-full" />
         </div>

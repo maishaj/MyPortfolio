@@ -67,7 +67,7 @@ const Projects = () => {
                 transition={{ duration: 0.6 }}
                 className="text-4xl md:text-5xl font-black text-white tracking-tighter"
                 >
-                Selected <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">Works_</span>
+                My <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">Projects_</span>
                 </motion.h2>
                 <div className="h-1 w-20 bg-blue-500 mt-4 rounded-full mb-10" />
             </div>
@@ -86,7 +86,6 @@ const Projects = () => {
               onClick={() => setSelectedProject(project)}
               className="group relative bg-white/[0.02] border border-white/5 rounded-[2.5rem] overflow-hidden hover:border-white/20 hover:bg-white/[0.04] transition-all cursor-pointer"
             >
-              {/* Image with Slim Aspect Ratio */}
               <div className="relative aspect-[16/11] overflow-hidden">
                 <img 
                   src={project.image} 
@@ -143,23 +142,23 @@ const Projects = () => {
                 transition={{ type: 'spring', damping: 25, stiffness: 200 }} 
                 className="relative w-full max-w-2xl bg-[#080808] h-full border-l border-white/10 p-10 overflow-y-auto"
               >
-                {/* Close Button */}
-                <div className="sticky top-0 z-[110] flex justify-end mb-4 md:absolute md:top-10 md:right-10 md:mb-0">
-                <button 
-                onClick={() => setSelectedProject(null)} 
-                className="group flex items-center gap-2 p-3 bg-white/10 text-white rounded-full hover:bg-white/20 border border-white/20 transition-all backdrop-blur-xl"
-                aria-label="Close details"
-                >
-                <span className="text-[10px] font-black ml-2 md:hidden">CLOSE</span>
-                <FiX size={24} />
-                </button>
-                </div>
                 
                 {/* Modal Header */}
                 <div className="mt-16 mb-12">
-                  <span className="text-blue-500 font-mono text-xs uppercase tracking-[0.4em]">
-                    {selectedProject.category}
-                  </span>
+                  <div className='flex justify-between items-center'>
+                    <span className="text-blue-500 font-mono text-xs uppercase tracking-[0.4em]">
+                      {selectedProject.category}
+                    </span>
+                    <div className="sticky top-0 z-100 flex justify-end mb-4 md:absolute md:top-10 md:right-10 md:mb-0">
+                        <button 
+                        onClick={() => setSelectedProject(null)} 
+                        className="group flex items-center gap-2 p-3 bg-white/10 text-white rounded-full hover:bg-white/20 border border-white/20 transition-all backdrop-blur-xl"
+                        aria-label="Close details"
+                        >
+                        <FiX size={10} />
+                        </button>
+                    </div>
+                  </div>
                   <h2 className="text-5xl md:text-6xl font-black text-white mt-4 uppercase tracking-tighter">
                     {selectedProject.title}
                   </h2>

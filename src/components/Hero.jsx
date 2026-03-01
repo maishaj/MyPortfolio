@@ -7,7 +7,7 @@ import { Link } from 'react-router';
 
 const Hero = () => {
   return (
-    <section id="home" className="relative min-h-screen w-10/12 mx-auto bg-[#030303] flex items-center overflow-hidden pt-20">
+    <section id="home" className="relative min-h-screen w-full max-w-7xl mx-auto bg-[#030303] flex items-center overflow-hidden pt-20">
       
       {/* Background Glows */}
       <div className="absolute top-[-10%] right-[-5%] w-[40%] h-[50%] rounded-full bg-purple-600/10 blur-[120px]" />
@@ -71,40 +71,39 @@ const Hero = () => {
         </motion.div>
 
         {/* Right Side: The "Figma" Style Image Card */}
-        <motion.div 
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8 }}
-          className="relative group justify-self-center lg:justify-self-end"
+       <motion.div 
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.8 }}
+        className="relative group justify-self-center lg:justify-self-end"
         >
-          {/* Glass Card Outer Frame */}
-          <div className="relative z-10 p-2 rounded-[2rem] bg-gradient-to-br from-white/10 to-transparent border border-white/10 backdrop-blur-2xl shadow-2xl">
-            <div className="relative w-full max-w-[320px] md:max-w-[380px] aspect-[4/5] overflow-hidden rounded-[1.5rem]">
-              <img 
-                // src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?q=80&w=1974&auto=format&fit=crop" 
+        {/* Glass Card Outer Frame - Now Circular */}
+        <div className="relative z-10 p-2 rounded-full bg-gradient-to-br from-white/10 to-transparent border border-white/10 backdrop-blur-2xl shadow-2xl">
+            
+            {/* Image Container - Aspect Square + Rounded Full */}
+            <div className="relative w-[280px] sm:w-[300px] md:w-[300px] mx-auto aspect-square overflow-hidden rounded-full border-4 border-[#030303]">
+            <img 
                 src={profile}
                 alt="Portrait" 
                 className="w-full h-full object-cover grayscale brightness-110 group-hover:grayscale-0 transition-all duration-700"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
-              
-              {/* Floating Tech Stack inside Image */}
-              <div className="absolute bottom-4 left-4 right-4 flex justify-between items-end rounded-full">
-                <div>
-                  <p className="text-white font-bold text-sm">Frontend Developer</p>
-                  <p className="text-zinc-400 text-[10px] uppercase tracking-widest">MERN STACK</p>
-                </div>
-                <div className="w-10 h-10 rounded-full bg-purple-500/20 backdrop-blur-md flex items-center justify-center border border-purple-500/50">
-                   <Link to="https://github.com/maishaj"><FiArrowUpRight className="text-purple-400" /></Link>
-                </div>
-              </div>
+            />
+            
+            {/* Subtle bottom shadow overlay inside the circle */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+            
+            {/* Floating Tech Stack inside Image - Repositioned for Circle */}
+            <div className="absolute bottom-10 left-0 right-0 flex flex-col items-center text-center">
+                <p className="text-white font-bold text-xs">Frontend Developer</p>
+                <p className="text-zinc-400 text-[8px] uppercase tracking-[0.3em] mt-1">MERN STACK</p>
             </div>
-          </div>
+            </div>
+        </div>
 
-          {/* Decorative Elements - Ibrahim style floating circles */}
-          <div className="absolute -top-6 -right-6 w-24 h-24 bg-purple-600/20 rounded-full blur-2xl animate-pulse" />
-          <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-blue-600/20 rounded-full blur-3xl" />
-        </motion.div>
+        {/* Decorative Elements - Floating circles */}
+        <div className="absolute -top-6 -right-6 w-32 h-32 bg-purple-600/10 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute -bottom-6 -left-6 w-40 h-40 bg-blue-600/10 rounded-full blur-3xl" />
+            </motion.div>
+        
 
       </div>
     </section>

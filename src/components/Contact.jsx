@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FiMail, FiPhone, FiMapPin, FiSend } from 'react-icons/fi';
+import toast from 'react-hot-toast';
 
 const Contact = () => {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
@@ -8,7 +9,9 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Add your logic (Formspree, EmailJS, etc.)
-    console.log("Form Submitted:", formData);
+    //console.log("Form Submitted:", formData);
+    toast.success("Your message is sent!")
+    e.target.reset();
   };
 
   return (
